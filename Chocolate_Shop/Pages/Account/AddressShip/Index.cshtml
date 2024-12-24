@@ -1,0 +1,51 @@
+﻿@page
+@model Chocolate_Shop.Pages.Account.AddressShip.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Address Ship</h1>
+<p>
+    <a class="btn btn-success" href="@Url.Page("Create")">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressShip[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressShip[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressShip[0].Address)
+            </th>           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.AddressShip) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>           
+            <td>               
+                <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Edit", new { id = item.AddressShipId })'">Edit</button>
+                <button class="btn btn-danger" onclick="window.location.href='@Url.Page("./Delete", new { id = item.AddressShipId })'">Delete</button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a href="~/Account/Orders/Index">Back to Cart</a>
+</div>

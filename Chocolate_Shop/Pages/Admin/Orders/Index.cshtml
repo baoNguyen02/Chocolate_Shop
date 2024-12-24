@@ -1,0 +1,116 @@
+﻿@page
+@model Chocolate_Shop.Pages.Admin.Orders.IndexModel
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1>Member</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Account.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Product.ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].QuantityPerUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].UnitPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].OrderDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].RequiredDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].ShippedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].AddressShipId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order[0].Type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Order)
+        {
+            <tr>              
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Account.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.ProductName)
+                </td>              
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuantityPerUnit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitPrice)
+                </td>              
+                <td>
+                    @if (item.OrderDate.HasValue)
+                    {
+                        <text>@item.OrderDate.Value.ToString("dd/MM/yyyy")</text>
+                    }
+                    else
+                    {
+                        <text>Unknown</text>
+                    }
+                </td>
+                <td>
+                    @if (item.RequiredDate.HasValue)
+                    {
+                        <text>@item.RequiredDate.Value.ToString("dd/MM/yyyy")</text>
+                    }
+                    else
+                    {
+                        <text>Unknown</text>
+                    }
+                </td>
+                <td>
+                    @if (item.ShippedDate.HasValue)
+                    {
+                        <text>@item.ShippedDate.Value.ToString("dd/MM/yyyy")</text>
+                    }
+                    else
+                    {
+                        <text>Unknown</text>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AddressShip.Address)
+                </td>
+                <td>
+                    @if (item.Type == 1)
+                    {
+                        <span style="color: red;">Waitting</span>
+                    }
+                    else if (item.Type == 2)
+                    {
+                        <span style="color: orange;">Accept</span>
+                    }
+                    else{
+                        <span style="color: green;">Complete</span>
+                    }
+                </td>
+                <td>
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Edit", new { id = item.OrderId })'">Edit</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

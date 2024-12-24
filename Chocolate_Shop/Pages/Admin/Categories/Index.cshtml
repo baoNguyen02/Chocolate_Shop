@@ -1,0 +1,47 @@
+﻿@page
+@model Chocolate_Shop.Pages.Admin.Categories.IndexModel
+@{
+    ViewData["Title"] = "Category";
+}
+
+<h1>Category</h1>
+
+<p>
+    <a class="btn btn-success" href="@Url.Page("Create")">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Categories[0].CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categories[0].CategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categories[0].Description)
+            </th>           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Categories)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>               
+                <td>                  
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Edit", new { id = item.CategoryId })'">Edit</button>                  
+                    <button class="btn btn-danger" onclick="window.location.href='@Url.Page("./Delete", new { id = item.CategoryId })'">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

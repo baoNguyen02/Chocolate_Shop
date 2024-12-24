@@ -1,0 +1,66 @@
+﻿@page
+@model Chocolate_Shop.Pages.Admin.Products.IndexModel
+
+@{
+    ViewData["Title"] = "Product";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Product</h1>
+
+<p>
+    <a class="btn btn-success" href="@Url.Page("Create")">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].ProductName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Quantity)
+            </th>         
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Product[0].Category)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Product) {
+        <tr>
+            <td>
+                    <img src="@item.ProductImage" style="width: 100px; height: 100px;" alt="Product Image">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>           
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.CategoryName)
+            </td>
+            <td>
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Edit", new { id = item.ProductId })'">Edit</button>                   
+                    <button class="btn btn-danger" onclick="window.location.href='@Url.Page("./Delete", new { id = item.ProductId })'">Delete</button>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

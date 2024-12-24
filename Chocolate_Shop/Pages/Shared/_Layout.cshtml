@@ -1,0 +1,312 @@
+﻿@using Microsoft.EntityFrameworkCore
+@{
+    var user = Context.Request.HttpContext.Session.GetString("User");
+    Models.Account account = null;
+    int orderCount = 0;
+    if (user != null)
+    {
+        account = System.Text.Json.JsonSerializer.Deserialize<Models.Account>(user);
+        using (Models.Chocolate_ShopContext _context = new Models.Chocolate_ShopContext())
+        {
+            orderCount = await _context.Orders
+                .Where(o => o.AccountId == account.AccountId && o.Type == 0)
+                .CountAsync();
+        }
+    }
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>@ViewData["Title"] - Chocolate_Shop</title>
+
+
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!--slick slider stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/slick-theme.css" asp-append-version="true" />
+    <!-- font awesome style -->
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" asp-append-version="true" />
+    <!-- Custom styles for this template -->
+    <link href="~/css/style.css" rel="stylesheet" asp-append-version="true" />
+    <!-- responsive style -->
+    <link href="~/css/responsive.css" rel="stylesheet" asp-append-version="true" />
+
+    <style>
+        .profile-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .profile-picture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f2f2f2;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: -30px;
+            border-radius: 8px;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                border-bottom: 1px solid #ddd;
+            }
+
+                .dropdown-content a:last-child {
+                    border-bottom: none;
+                }
+
+                .dropdown-content a:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .profile-dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav_cart-btn {
+            padding: 10px 40px 10px 20px;
+        }
+    </style>
+</head>
+
+<body class="sub_page">
+
+    <div class="main_body_content">
+
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg custom_nav-container ">
+                        <a class="navbar-brand" href="/Index">
+                            ChocoLux
+                        </a>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class=""> </span>
+                        </button>
+
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Index">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>                             
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact Us</a>
+                                </li>
+                                
+                                @if (user != null)
+                                {
+                                    if (account.RoleId == 1)
+                                    {
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="~/Admin/Orders/Index">Order</a>
+                                        </li>
+                                        <li class="nav-item profile-dropdown">
+                                            <a class="nav-link">Admin</a>
+                                            <div class="dropdown-content">                                              
+                                                <a href="~/Admin/Categories/Index">Category</a>
+                                                <a href="~/Admin/Products/Index">Product</a>
+                                                <a href="~/Admin/Members/Index">Member</a>
+                                            </div>
+                                        </li>
+                                    }else{
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="~/Account/Orders/PurchaseOrder">Order</a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                            <div class="quote_btn-container">
+                                @if (user != null)
+                                {
+                                    if (account.RoleId != 1)
+                                    {
+                                        <a asp-area="" asp-page="/Account/Orders/Index">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <span id="cartCount">(@orderCount)</span>
+                                        </a>
+                                    }
+                                }                               
+
+                                @if (user == null)
+                                {
+                                    <a asp-area="" asp-page="/Account/Login">
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <div class="profile-dropdown">
+                                        <img src="@account.AccountImage" alt="" class="profile-picture">
+                                        <div class="dropdown-content">
+                                            <div class="welcome-message">
+                                                Welcome: <span class="username">@account.LastName</span>
+                                            </div>
+                                            <a href="~/Account/Profile">Profile</a>
+                                            <a href="~/Account/Logout">Logout</a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+        @RenderBody()
+        <!-- info section -->
+        <section class="info_section layout_padding2">
+            <div class="container">
+                <div class="row info_main_row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_links">
+                            <h4>
+                                Menu
+                            </h4>
+                            <div class="info_links_menu">
+                                <a href="Index">
+                                    Home
+                                </a>
+                                <a href="about.html">
+                                    About
+                                </a>
+                                <a href="chocolate.html">
+                                    Chocolates
+                                </a>
+                                <a href="testimonial.html">
+                                    Testimonial
+                                </a>
+                                <a href="contact.html">
+                                    Contact us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_insta">
+                            <h4>
+                                Instagram
+                            </h4>
+                            <div class="insta_box">
+                                <div class="img-box">
+                                    <img src="~/images/insta-img.png" alt="">
+                                </div>
+                                <p>
+                                    long established fact that a reader
+                                </p>
+                            </div>
+                            <div class="insta_box">
+                                <div class="img-box">
+                                    <img src="~/images/insta-img.png" alt="">
+                                </div>
+                                <p>
+                                    long established fact that a reader
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="info_detail">
+                            <h4>
+                                Company
+                            </h4>
+                            <p class="mb-0">
+                                when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4>
+                            Contact Us
+                        </h4>
+                        <div class="info_contact">
+                            <a href="">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                <span>
+                                    Location
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <span>
+                                    Call +01 1234567890
+                                </span>
+                            </a>
+                            <a href="">
+                                <i class="fa fa-envelope"></i>
+                                <span>
+                                    demo@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end info_section -->
+
+    </div>
+
+    <!-- footer section -->
+    <footer class="container-fluid footer_section">
+        <div class="container">
+            <div class="col-md-11 col-lg-8 mx-auto">
+                <p>
+                    &copy; <span id="displayYear"></span> All Rights Reserved By
+                    <a href="https://html.design/">Free Html Templates</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section -->
+    <!-- jQery -->
+    <script src="~/js/jquery-3.4.1.min.js" asp-append-version="true"></script>
+    <!-- bootstrap js -->
+    <script src="~/js/bootstrap.js" asp-append-version="true"></script>
+    <!-- slick slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+    <!-- custom js -->
+    <script src="~/js/custom.js" asp-append-version="true"></script>
+    <script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

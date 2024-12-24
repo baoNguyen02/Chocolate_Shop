@@ -1,0 +1,195 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\forgotpassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\hubs\\serverhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\hubs\\serverhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\sendemailsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\sendemailsuccess.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\sendemailsuccess.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\sendemailsuccess.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|c:\\users\\admin\\desktop\\prn221\\chocolate_shop\\chocolate_shop\\chocolate_shop\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4865B98-6749-45F9-AFE6-F6E1C8C6210B}|Chocolate_Shop\\Chocolate_Shop.csproj|solutionrelative:chocolate_shop\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServerHub.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Hubs\\ServerHub.cs",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Hubs\\ServerHub.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Hubs\\ServerHub.cs",
+              "RelativeToolTip": "Chocolate_Shop\\Hubs\\ServerHub.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T06:11:11.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ForgotPassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T05:06:37.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACYAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T07:46:29.865Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\ChangePassword.cshtml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAC4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T07:46:41.217Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SendEmailSuccess.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-05T05:00:27.462Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ForgotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\ForgotPassword.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAIBJwCEAAABoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-05T04:51:40.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SendEmailSuccess.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml.cs",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml.cs",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\SendEmailSuccess.cshtml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-05T05:20:41.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Program.cs",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Program.cs",
+              "RelativeToolTip": "Chocolate_Shop\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-02T09:28:43.402Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBkAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T15:48:37.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Chocolate_Shop\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\admin\\Desktop\\PRN221\\Chocolate_Shop\\Chocolate_Shop\\Chocolate_Shop\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Chocolate_Shop\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-21T04:12:03.744Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 201,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

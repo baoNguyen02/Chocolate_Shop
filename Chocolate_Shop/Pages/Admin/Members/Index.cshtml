@@ -1,0 +1,106 @@
+﻿@page
+@model Chocolate_Shop.Pages.Admin.Members.IndexModel
+@{
+    ViewData["Title"] = "Member";
+}
+
+<h1>Member</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].AccountImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Role.RoleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Gmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].BirthDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Account)
+        {
+            <tr>
+                <td>
+                    <img src="@item.AccountImage" style="width: 100px; height: 100px;" alt="Product Image">
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Role.RoleName)
+                </td>
+                <td>
+                    @if (item.Gender.HasValue)
+                    {
+                        <text>@(item.Gender.Value ? "Male" : "Female")</text>
+                    }
+                    else
+                    {
+                        <text>Unknown</text>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gmail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>
+                <td>
+                    @if (item.BirthDay.HasValue)
+                    {
+                        <text>@item.BirthDay.Value.ToString("dd/MM/yyyy")</text>
+                    }
+                    else
+                    {
+                        <text>Unknown</text>
+                    }
+                </td>
+                <td>
+                    @if (item.Status == 1)
+                    {
+                        <span style="color: green;">Active</span>
+                    }
+                    else
+                    {
+                        <span style="color: red;">Inactive</span>
+                    }
+                </td>
+                <td>
+                    <button class="btn btn-primary" onclick="window.location.href='@Url.Page("./Edit", new { id = item.AccountId })'">Edit</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

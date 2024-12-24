@@ -1,0 +1,197 @@
+﻿@page
+@model Chocolate_Shop.Pages.Account.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+    <div class="row flex-lg-nowrap">      
+        <div class="col">
+            <div class="row">
+                <div class="col mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="e-profile">
+                                <div class="row">
+                                    <div class="col-12 col-sm-auto mb-3">
+                                        <div class="mx-auto" style="width: 140px;">
+                                            <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                                @if (!string.IsNullOrEmpty(Model.Account.AccountImage))
+                                                {
+                                                    <img src="@Model.Account.AccountImage" alt="Avatar" style="max-width: 100%; max-height: 100%;">
+                                                }
+                                                else
+                                                {
+                                                    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">@Model.Account.FirstName</h4>
+                                            <h4 class="mb-0">@Model.Account.LastName</h4>                                          
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+                                </ul>
+                 
+                                <div class="tab-content pt-3">
+                                    <div class="tab-pane active">
+                                        <form action="" method="post">
+                                            <p class="alert-success">@ViewData["success"]</p>
+                                            <p class="alert-danger">@ViewData["fail"]</p>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>First Name</label>
+                                                                <input class="form-control" type="text" asp-for="Account.FirstName">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Last Name</label>
+                                                                <input class="form-control" type="text" asp-for="Account.LastName">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Email</label>
+                                                                <input class="form-control" type="text" type="email" asp-for="Account.Gmail">
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Gender</label><br>
+                                                                <input class="form-check-input" type="radio" asp-for="Account.Gender" name="gender" id="maleGender"
+                                                                       value="true" onclick="uncheckFemale()" checked="@(Model.Account.Gender == true)" />
+
+                                                                <label class="form-check-label" for="femaleGender">Male</label>
+                                                                <input class="form-check-input" type="radio" asp-for="Account.Gender" name="gender" id="femaleGender"
+                                                                       value="false" onclick="uncheckMale()" checked="@(Model.Account.Gender == false)" />
+                                                                <label class="form-check-label" for="femaleGender">Female</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Phone</label>
+                                                                <input class="form-control" type="number" asp-for="Account.Phone">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Address</label>
+                                                                <input class="form-control" type="text" asp-for="Account.Address">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Birthday</label>
+                                                                <input class="form-control" type="date" asp-for="Account.BirthDay">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Image</label>
+                                                                <input class="form-control" type="text" asp-for="Account.AccountImage">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 col-sm-6 mb-3">
+                                                    <div class="mb-2"><br/><b>Change Password</b></div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Current Password</label>
+                                                                <input class="form-control" type="password" asp-for="currentPass" placeholder="••••••">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>New Password</label>
+                                                                <input class="form-control" type="password" asp-for="newPass" placeholder="••••••">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="form-group">
+                                                                <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
+                                                                <input class="form-control" type="password" asp-for="rePass" placeholder="••••••">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                                             
+                                            </div>
+                                            <div class="row">
+                                                <div class="col d-flex justify-content-end">
+                                                    <button class="btn btn-dark btn-lg btn-block" type="submit">Save Changes</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 mb-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="px-xl-3">
+                                <button class="btn btn-block btn-secondary" onclick="logout()">
+                                    <i class="fa fa-sign-out"></i>
+                                    <span>Logout</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title font-weight-bold">Support</h6>
+                            <p class="card-text">Get fast, free help from our friendly assistants.</p>
+                            <button type="button" class="btn btn-dark">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function uncheckFemale() {
+        document.getElementById('femaleGender').checked = false;
+    }
+
+    function uncheckMale() {
+        document.getElementById('maleGender').checked = false;
+    }
+    function logout() {        
+        window.location.href = "/Account/Logout"; 
+    }
+</script>
